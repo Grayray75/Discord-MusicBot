@@ -1,10 +1,11 @@
 version: "3"
 
+name: "discord-musicbot"
+
 services:
-  discord-musicbot:
+  discordbot:
     build: .
     image: discord-musicbot:latest
-    container_name: discord-musicbot
     restart: unless-stopped
     networks:
       - lavalink-net
@@ -14,8 +15,7 @@ services:
       - ./config.js:/usr/src/app/config.js:ro
 
   lavalink:
-    image: fredboat/lavalink:dev
-    container_name: music-lavalink
+    image: fredboat/lavalink:3
     hostname: lavalink
     restart: unless-stopped
     networks:
