@@ -5,7 +5,6 @@ name: "discord-musicbot"
 services:
   discordbot:
     build: .
-    image: discord-musicbot:latest
     restart: unless-stopped
     networks:
       - lavalink-net
