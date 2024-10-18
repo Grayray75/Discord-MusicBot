@@ -14,11 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SudhanPlayz/Discord-MusicBot.git"
+    "url": "git+https://github.com/Grayray75/Discord-MusicBot.git"
   },
   "authors": [
     "SudhanPlayz",
-    "DarrenOfficial"
+    "DarrenOfficial",
+    "Grayray75"
   ],
   "license": "Apache-2.0",
   "engines": {
