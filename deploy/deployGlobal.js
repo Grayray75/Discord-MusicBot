@@ -6,7 +6,7 @@ const loadCommands = require('../src/util/loadCommands');
 (async () => {
     const config = await getConfig();
     const rest = new REST({ version: '9' }).setToken(config.token);
-    
+
     const commands = await loadCommands().then((cmds) => {
         return [].concat(cmds.slash).concat(cmds.context);
     });

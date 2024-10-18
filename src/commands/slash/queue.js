@@ -39,9 +39,7 @@ const command = new SlashCommand()
 
         if (!player.queue.size || player.queue.size === 0) {
             let song = player.queue.current;
-            var title = escapeMarkdown(song.title);
-            var title = title.replace(/\]/g, '');
-            var title = title.replace(/\[/g, '');
+            let title = escapeMarkdown(song.title).replace(/\]/g, '').replace(/\[/g, '');
             const queueEmbed = new MessageEmbed()
                 .setColor(client.config.embedColor)
                 .setDescription(`**♪ | Now playing:** [${title}](${song.uri})`)
@@ -98,9 +96,7 @@ const command = new SlashCommand()
 
             if (player.queue.size < 11 || player.queue.totalSize < 11) {
                 let song = player.queue.current;
-                var title = escapeMarkdown(song.title);
-                var title = title.replace(/\]/g, '');
-                var title = title.replace(/\[/g, '');
+                let title = escapeMarkdown(song.title).replace(/\]/g, '').replace(/\[/g, '');
                 const embedTwo = new MessageEmbed()
                     .setColor(client.config.embedColor)
                     .setDescription(`**♪ | Now playing:** [${title}](${song.uri}) [${player.queue.current.requester}]\n\n**Queued Tracks**\n${pages[page]}`)
@@ -137,9 +133,7 @@ const command = new SlashCommand()
                     .catch(() => {});
             } else {
                 let song = player.queue.current;
-                var title = escapeMarkdown(song.title);
-                var title = title.replace(/\]/g, '');
-                var title = title.replace(/\[/g, '');
+                let title = escapeMarkdown(song.title).replace(/\]/g, '').replace(/\[/g, '');
                 const embedThree = new MessageEmbed()
                     .setColor(client.config.embedColor)
                     .setDescription(`**♪ | Now playing:** [${title}](${song.uri}) [${player.queue.current.requester}]\n\n**Queued Tracks**\n${pages[page]}`)
@@ -201,9 +195,7 @@ const command = new SlashCommand()
                         await button.deferUpdate().catch(() => {});
                         page = page + 1 < pages.length ? ++page : 0;
                         let song = player.queue.current;
-                        var title = escapeMarkdown(song.title);
-                        var title = title.replace(/\]/g, '');
-                        var title = title.replace(/\[/g, '');
+                        let title = escapeMarkdown(song.title).replace(/\]/g, '').replace(/\[/g, '');
                         const embedFour = new MessageEmbed()
                             .setColor(client.config.embedColor)
                             .setDescription(`**♪ | Now playing:** [${title}](${song.uri}) [${player.queue.current.requester}]\n\n**Queued Tracks**\n${pages[page]}`)
@@ -241,9 +233,7 @@ const command = new SlashCommand()
                         await button.deferUpdate().catch(() => {});
                         page = page > 0 ? --page : pages.length - 1;
                         let song = player.queue.current;
-                        var title = escapeMarkdown(song.title);
-                        var title = title.replace(/\]/g, '');
-                        var title = title.replace(/\[/g, '');
+                        let title = escapeMarkdown(song.title).replace(/\]/g, '').replace(/\[/g, '');
                         const embedFive = new MessageEmbed()
                             .setColor(client.config.embedColor)
                             .setDescription(`**♪ | Now playing:** [${title}](${song.uri}) [${player.queue.current.requester}]\n\n**Queued Tracks**\n${pages[page]}`)

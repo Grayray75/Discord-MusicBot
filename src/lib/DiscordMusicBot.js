@@ -116,8 +116,7 @@ class DiscordMusicBot extends Client {
                 this.warn(`Player: ${player.options.guild} | Track had an error: ${err.message}.`);
                 //console.log(err);
                 let song = player.queue.current;
-                var title = Util.escapeMarkdown(song.title);
-                var title = title.replace(/\]/g, '');
+                let title = Util.escapeMarkdown(song.title).replace(/\]/g, '').replace(/\[/g, '');
 
                 let errorEmbed = new MessageEmbed().setColor('RED').setTitle('Playback error!').setDescription(`Failed to load track: \`${title}\``).setFooter({
                     text: "Oops! something went wrong but it's not your fault!"
@@ -129,8 +128,7 @@ class DiscordMusicBot extends Client {
                 this.warn(`Track has an error: ${err.message}`);
                 //console.log(err);
                 let song = player.queue.current;
-                var title = Util.escapeMarkdown(song.title);
-                var title = title.replace(/\]/g, '');
+                let title = Util.escapeMarkdown(song.title).replace(/\]/g, '').replace(/\[/g, '');
 
                 let errorEmbed = new MessageEmbed().setColor('RED').setTitle('Track error!').setDescription(`Failed to load track: \`${title}\``).setFooter({
                     text: "Oops! something went wrong but it's not your fault!"
@@ -186,7 +184,8 @@ class DiscordMusicBot extends Client {
             // on TRACK_START send message
             .on(
                 'trackStart',
-                /** @param {EpicPlayer} player */ async (player, track) => {
+                /** @param {EpicPlayer} player */
+                async (player, track) => {
                     this.songsPlayed++;
                     playedTracks.push(track.identifier);
                     if (playedTracks.length >= 100) {
@@ -194,8 +193,7 @@ class DiscordMusicBot extends Client {
                     }
 
                     this.warn(`Player: ${player.options.guild} | Track has been started playing [${colors.blue(track.title)}]`);
-                    var title = Util.escapeMarkdown(track.title);
-                    var title = title.replace(/\]/g, '');
+                    let title = Util.escapeMarkdown(track.title).replace(/\]/g, '').replace(/\[/g, '');
                     let trackStartedEmbed = this.createEmbed()
                         .setAuthor({ name: 'Now playing', iconURL: this.config.iconURL })
                         .setDescription(`[${title}](${track.uri})` || 'No Descriptions')
@@ -246,7 +244,8 @@ class DiscordMusicBot extends Client {
 
             .on(
                 'queueEnd',
-                /** @param {EpicPlayer} */ async (player, track) => {
+                /** @param {EpicPlayer} */
+                async (player, track) => {
                     const autoQueue = player.get('autoQueue');
 
                     if (autoQueue) {

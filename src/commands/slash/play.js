@@ -78,9 +78,7 @@ const command = new SlashCommand()
             if (!player.playing && !player.paused && !player.queue.size) {
                 player.play();
             }
-            var title = escapeMarkdown(res.tracks[0].title);
-            var title = title.replace(/\]/g, '');
-            var title = title.replace(/\[/g, '');
+            let title = escapeMarkdown(res.tracks[0].title).replace(/\]/g, '').replace(/\[/g, '');
             let addQueueEmbed = new MessageEmbed()
                 .setColor(client.config.embedColor)
                 .setAuthor({ name: 'Added to queue', iconURL: client.config.iconURL })

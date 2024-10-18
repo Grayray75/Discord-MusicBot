@@ -36,9 +36,7 @@ const command = new SlashCommand()
         }
 
         const song = player.queue.current;
-        var title = escapeMarkdown(song.title);
-        var title = title.replace(/\]/g, '');
-        var title = title.replace(/\[/g, '');
+        let title = escapeMarkdown(song.title).replace(/\]/g, '').replace(/\[/g, '');
         const embed = new MessageEmbed()
             .setColor(client.config.embedColor)
             .setAuthor({ name: 'Now Playing', iconURL: client.config.iconURL })

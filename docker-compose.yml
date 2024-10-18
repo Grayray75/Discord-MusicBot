@@ -15,11 +15,9 @@ services:
       - ./config.js:/usr/src/app/config.js:ro
 
   lavalink:
-    image: fredboat/lavalink:3
+    image: ghcr.io/lavalink-devs/lavalink:3
     hostname: lavalink
     restart: unless-stopped
-    ports:
-      - 2333:2333
     networks:
       - lavalink-net
     volumes:

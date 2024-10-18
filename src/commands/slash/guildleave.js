@@ -7,9 +7,8 @@ const command = new SlashCommand()
     .addStringOption((option) => option.setName('id').setDescription('Enter the guild id to leave (type `list` for guild ids)').setRequired(true))
     .setRun(async (client, interaction, options) => {
         if (interaction.user.id === client.config.adminId) {
+            const id = interaction.options.getString('id');
             try {
-                const id = interaction.options.getString('id');
-
                 if (id.toLowerCase() === 'list') {
                     client.guilds.cache.forEach((guild) => {
                         console.log(`${guild.name} | ${guild.id}`);
