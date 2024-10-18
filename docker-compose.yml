@@ -22,3 +22,5 @@ services:
       - lavalink-net
     volumes:
       - ./lavalink/application.yml:/opt/Lavalink/application.yml:ro
+      # persist plugins between restarts
+      - ./plugins/:/opt/Lavalink/plugins/
