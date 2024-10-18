@@ -2,10 +2,10 @@
 
 ## 🚧 | Prerequisites
 
-- [Node.js 16+](https://nodejs.org/en/download/)
-- [Lavalink Server](https://code.darrennathanael.com/how-to-lavalink)
-- You'll need to run `npm run deploy` or `yarn deploy`. to initialized the slash commands. _You can do this on your pc
-  locally_
+-   [Node.js 16+](https://nodejs.org/en/download/)
+-   [Lavalink Server](https://code.darrennathanael.com/how-to-lavalink)
+-   You'll need to run `npm run deploy` or `yarn deploy`. to initialized the slash commands. _You can do this on your pc
+    locally_
 
 > NOTE: Lavalink is needed for music functionality. You need to have a working Lavalink server to make the bot work.
 
@@ -44,9 +44,9 @@ Contributions are always welcomed :D Make sure to follow [Contributing.md](/CONT
 
 ## 🌟 | Made with
 
-- [Discord.js](https://discord.js.org/)
-- [Lavalink](https://github.com/freyacodes/Lavalink) with erela.js
-- [Express](https://expressjs.com/)
-- [Next JS](https://nextjs.org/)
-- [Next UI](https://nextui.org)
-- [Material UI Icons](https://mui.com/material-ui/material-icons/)
+-   [Discord.js](https://discord.js.org/)
+-   [Lavalink](https://github.com/freyacodes/Lavalink) with erela.js
+-   [Express](https://expressjs.com/)
+-   [Next JS](https://nextjs.org/)
+-   [Next UI](https://nextui.org)
+-   [Material UI Icons](https://mui.com/material-ui/material-icons/)

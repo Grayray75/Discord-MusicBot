@@ -1,4 +1,7 @@
-name: "discord-musicbot"
+name: 'discord-musicbot'
+
+networks:
+  lavalink-net:
 
 services:
   discordbot:
@@ -15,10 +18,9 @@ services:
     image: fredboat/lavalink:3
     hostname: lavalink
     restart: unless-stopped
+    ports:
+      - 2333:2333
     networks:
       - lavalink-net
     volumes:
-      - ./docker/application.yml:/opt/Lavalink/application.yml:ro
-
-networks:
-  lavalink-net:
+      - ./lavalink/application.yml:/opt/Lavalink/application.yml:ro
