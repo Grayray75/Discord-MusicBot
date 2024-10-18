@@ -40,7 +40,7 @@
     "moment-duration-format": "^2.3.2",
     "os": "^0.1.2",
     "pretty-ms": "^7.0.1",
-    "rlyrics": "^2.0.1",
+    "rlyrics": "github:Grayray75/rlyrics#31c388383e41758f44f717a199020121cd1d2d7d",
     "systeminformation": "^5.23.5",
     "winston": "^3.15.0",
     "youtube-sr": "^4.3.11"
