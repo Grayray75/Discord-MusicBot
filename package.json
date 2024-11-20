@@ -30,7 +30,7 @@
     "@discordjs/rest": "^1.7.1",
     "axios": "^1.7.7",
     "colors": "1.3.3",
-    "discord-api-types": "^0.37.102",
+    "discord-api-types": "^0.37.105",
     "discord.js": "^13.17.1",
     "dotenv": "^16.4.5",
     "erela.js": "^2.4.0",
@@ -43,7 +43,7 @@
     "pretty-ms": "^7.0.1",
     "rlyrics": "github:Grayray75/rlyrics#31c388383e41758f44f717a199020121cd1d2d7d",
     "systeminformation": "^5.23.5",
-    "winston": "^3.15.0",
+    "winston": "^3.17.0",
     "youtube-sr": "^4.3.11"
   },
   "devDependencies": {
