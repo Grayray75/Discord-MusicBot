@@ -14,12 +14,12 @@ plugins:
       - MUSIC
       - WEB
       - WEBEMBEDDED
-      - TVHTML5EMBEDDED
+      - ANDROID_VR
 
 lavalink:
   plugins:
     # https://github.com/lavalink-devs/youtube-source
-    - dependency: 'dev.lavalink.youtube:youtube-plugin:1.8.3'
+    - dependency: 'dev.lavalink.youtube:youtube-plugin:1.11.1'
       repository: 'https://maven.lavalink.dev/releases'
   server:
     password: 'bonsoirDocker'
