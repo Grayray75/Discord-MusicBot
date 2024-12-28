@@ -27,12 +27,12 @@
   },
   "dependencies": {
     "@discordjs/builders": "^1.9.0",
-    "@discordjs/rest": "^1.7.1",
-    "axios": "^1.7.7",
+    "@discordjs/rest": "^2.4.0",
+    "axios": "^1.7.9",
     "colors": "1.3.3",
-    "discord-api-types": "^0.37.105",
+    "discord-api-types": "^0.37.114",
     "discord.js": "^13.17.1",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
     "erela.js": "^2.4.0",
     "erela.js-filters": "^1.2.7",
     "jsoning": "^0.13.23",
@@ -42,12 +42,12 @@
     "os": "^0.1.2",
     "pretty-ms": "^7.0.1",
     "rlyrics": "github:Grayray75/rlyrics#31c388383e41758f44f717a199020121cd1d2d7d",
-    "systeminformation": "^5.23.5",
+    "systeminformation": "^5.23.23",
     "winston": "^3.17.0",
     "youtube-sr": "^4.3.11"
   },
   "devDependencies": {
     "eslint": "^8.57.1",
-    "prettier": "^3.3.3"
+    "prettier": "^3.4.2"
   }
 }
