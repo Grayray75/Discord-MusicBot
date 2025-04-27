@@ -39,7 +39,6 @@
     "moment": "^2.30.1",
     "moment-duration-format": "^2.3.2",
     "pretty-ms": "^7.0.1",
-    "rlyrics": "github:Grayray75/rlyrics#31c388383e41758f44f717a199020121cd1d2d7d",
     "systeminformation": "^5.25.11",
     "winston": "^3.17.0",
     "youtube-sr": "^4.3.11"
