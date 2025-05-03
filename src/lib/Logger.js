@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const winston = require('winston');
 const colors = require('colors');
 
@@ -8,32 +10,39 @@ class Logger {
         });
     }
 
-    log(Text) {
-        let d = new Date();
+    log(text) {
+        let date = new Date();
         this.logger.log({
             level: 'info',
-            message: 'info: ' + Text
+            message: 'info: ' + text
         });
-        console.log(colors.gray(`[${d.getDate()}:${d.getMonth()}:${d.getFullYear()} - ${d.getHours()}:${d.getMinutes()}]`) + colors.green(' | ' + Text));
+        console.log(colors.gray(getDateString(date)) + colors.green(' | ' + text));
     }
 
-    warn(Text) {
-        let d = new Date();
+    warn(text) {
+        let date = new Date();
         this.logger.log({
             level: 'warn',
-            message: 'warn: ' + Text
+            message: 'warn: ' + text
         });
-        console.log(colors.gray(`[${d.getDate()}:${d.getMonth()}:${d.getFullYear()} - ${d.getHours()}:${d.getMinutes()}]`) + colors.yellow(' | ' + Text));
+        console.log(colors.gray(getDateString(date)) + colors.yellow(' | ' + text));
     }
 
-    error(Text) {
-        let d = new Date();
+    error(text) {
+        let date = new Date();
         this.logger.log({
             level: 'error',
-            message: 'error: ' + Text
+            message: 'error: ' + text
         });
-        console.log(colors.gray(`[${d.getDate()}:${d.getMonth()}:${d.getFullYear()} - ${d.getHours()}:${d.getMinutes()}]`) + colors.red(' | ' + Text));
+        console.log(colors.gray(getDateString(date)) + colors.red(' | ' + text));
     }
+}
+
+function getDateString(date) {
+    function pad(n) {
+        return n < 10 ? '0' + n : n;
+    }
+    return `[${date.getFullYear()}-${pad(date.getMonth())}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}]`;
 }
 
 module.exports = Logger;

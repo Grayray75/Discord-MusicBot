@@ -25,12 +25,12 @@ const command = new SlashCommand()
         // show system uptime
         var sysuptime = moment.duration(os.uptime() * 1000).format('d[ Days]・h[ Hrs]・m[ Mins]・s[ Secs]');
 
+        // TODO: sh is not available
         // get commit hash and date
         let gitHash = 'unknown';
         try {
             gitHash = require('child_process').execSync('git rev-parse HEAD').toString().trim();
         } catch (e) {
-            // do nothing
             gitHash = 'unknown';
         }
 
