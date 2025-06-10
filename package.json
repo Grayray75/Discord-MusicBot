@@ -39,7 +39,7 @@
     "moment": "^2.30.1",
     "moment-duration-format": "^2.3.2",
     "pretty-ms": "^7.0.1",
-    "systeminformation": "^5.25.11",
+    "systeminformation": "^5.27.1",
     "winston": "^3.17.0",
     "youtube-sr": "^4.3.11"
   },
