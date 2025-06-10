@@ -19,7 +19,7 @@ plugins:
 lavalink:
   plugins:
     # https://github.com/lavalink-devs/youtube-source
-    - dependency: 'dev.lavalink.youtube:youtube-plugin:1.13.2'
+    - dependency: 'dev.lavalink.youtube:youtube-plugin:1.13.3'
       repository: 'https://maven.lavalink.dev/releases'
   server:
     password: 'bonsoirDocker'
@@ -27,7 +27,7 @@ lavalink:
       youtube: false
       bandcamp: true
       soundcloud: true
-      twitch: true
+      twitch: false
       vimeo: true
       http: true
       local: false
