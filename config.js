@@ -28,7 +28,7 @@ module.exports = {
             port: 2333, // The port that lavalink is listening to. This must be a number!
             password: 'bonsoirDocker', //- The password of the lavalink server.
             retryAmount: 100, //- The amount of times to retry connecting to the node if connection got dropped.
-            retryDelay: 250, //- Delay between reconnect attempts if connection is lost.
+            retryDelay: 350, //- Delay between reconnect attempts if connection is lost.
             secure: false //- Can be either true or false. Only use true if ssl is enabled!
         }
     ],
