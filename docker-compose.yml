@@ -9,10 +9,10 @@ services:
     restart: unless-stopped
     networks:
       - lavalink-net
-    depends_on:
-      - lavalink
     volumes:
       - ./config.js:/usr/src/app/config.js:ro
+    depends_on:
+      - lavalink
 
   lavalink:
     image: ghcr.io/lavalink-devs/lavalink:3
@@ -24,3 +24,14 @@ services:
       - ./lavalink/application.yml:/opt/Lavalink/application.yml:ro
       # persist plugins between restarts
       - ./lavalink/plugins/:/opt/Lavalink/plugins/
+    depends_on:
+      - ytcipher
+
+  ytcipher:
+    image: ghcr.io/kikkia/yt-cipher:master
+    hostname: ytcipher
+    restart: unless-stopped
+    networks:
+      - lavalink-net
+    environment:
+      API_TOKEN: "really_secret_password"
