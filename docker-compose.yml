@@ -28,7 +28,7 @@ services:
       - ytcipher
 
   ytcipher:
-    image: ghcr.io/kikkia/yt-cipher:master
+    image: ghcr.io/kikkia/yt-cipher:68d0e323a8f857cf11bdeba1d7754196dfffcda1
     hostname: ytcipher
     restart: unless-stopped
     networks:

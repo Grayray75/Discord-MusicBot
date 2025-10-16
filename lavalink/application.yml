@@ -22,7 +22,7 @@ plugins:
 lavalink:
   plugins:
     # https://github.com/lavalink-devs/youtube-source
-    - dependency: 'dev.lavalink.youtube:youtube-plugin:1.14.0'
+    - dependency: 'dev.lavalink.youtube:youtube-plugin:1.15.0'
       repository: 'https://maven.lavalink.dev/releases'
   server:
     password: 'bonsoirDocker'
