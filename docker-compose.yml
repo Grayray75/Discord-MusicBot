@@ -1,4 +1,4 @@
-name: 'discord-musicbot'
+name: 'Magi'
 
 networks:
   lavalink-net:
@@ -28,7 +28,7 @@ services:
       - ytcipher
 
   ytcipher:
-    image: ghcr.io/kikkia/yt-cipher
+    image: ghcr.io/kikkia/yt-cipher:master
     hostname: ytcipher
     restart: unless-stopped
     networks:
