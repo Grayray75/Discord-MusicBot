@@ -5,7 +5,7 @@ const escapeMarkdown = require('discord.js').Util.escapeMarkdown;
 const command = new SlashCommand()
     .setName('play')
     .setDescription('Searches and plays the requested song \nSupports: \nYoutube, Spotify, Deezer, Apple Music')
-    .addStringOption((option) => option.setName('query').setDescription('What am I looking for?').setAutocomplete(true).setRequired(true))
+    .addStringOption((option) => option.setName('query').setDescription('What am I looking for?').setRequired(true))
     .setRun(async (client, interaction, options) => {
         let channel = await client.getChannel(client, interaction);
         if (!channel) {
