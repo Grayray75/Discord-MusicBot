@@ -112,7 +112,7 @@ const command = new SlashCommand()
                                 })
                                 .setURL(res.tracks[0].uri)
                                 .setThumbnail(res.tracks[0].displayThumbnail('maxresdefault'))
-                                .setDescription(`[${trackForPlay?.tracks[0]?.title}](${trackForPlay?.tracks[0].uri})` || 'No Title')
+                                .setDescription(`[${trackForPlay?.tracks[0]?.title}](${trackForPlay?.tracks[0].uri})`)
                                 .addFields(
                                     {
                                         name: 'Added by',

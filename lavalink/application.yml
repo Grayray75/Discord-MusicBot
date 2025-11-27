@@ -16,8 +16,8 @@ plugins:
       - WEB
       - WEBEMBEDDED
     remoteCipher:
-      url: "http://ytcipher:8001" # The base URL of your remote cipher server.
-      password: "really_secret_password" # The password to authenticate with your remote cipher server.
+      url: 'http://ytcipher:8001' # The base URL of your remote cipher server.
+      password: 'really_secret_password' # The password to authenticate with your remote cipher server.
 
 lavalink:
   plugins:

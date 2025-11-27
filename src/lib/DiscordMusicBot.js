@@ -2,7 +2,6 @@ const { Client, Intents, MessageEmbed, Collection, MessageActionRow, MessageButt
 const fs = require('fs');
 const path = require('path');
 const prettyMilliseconds = require('pretty-ms');
-const jsoning = require('jsoning');
 const { Manager } = require('erela.js');
 const filters = require('erela.js-filters');
 const colors = require('colors');
@@ -30,8 +29,6 @@ class DiscordMusicBot extends Client {
 
         this.LoadCommands();
         this.LoadEvents();
-
-        this.database = new jsoning('db.json');
 
         this.deletedMessages = new WeakSet();
         this.getLavalink = getLavalink;
@@ -196,7 +193,7 @@ class DiscordMusicBot extends Client {
                     let title = Util.escapeMarkdown(track.title).replace(/\]/g, '').replace(/\[/g, '');
                     let trackStartedEmbed = this.createEmbed()
                         .setAuthor({ name: 'Now playing', iconURL: this.config.iconURL })
-                        .setDescription(`[${title}](${track.uri})` || 'No Descriptions')
+                        .setDescription(`[${title}](${track.uri})`)
                         .addFields(
                             {
                                 name: 'Requested by',

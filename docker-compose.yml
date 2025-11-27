@@ -34,4 +34,4 @@ services:
     networks:
       - lavalink-net
     environment:
-      API_TOKEN: "really_secret_password"
+      API_TOKEN: 'really_secret_password'

@@ -82,7 +82,7 @@ const command = new SlashCommand()
             let addQueueEmbed = new MessageEmbed()
                 .setColor(client.config.embedColor)
                 .setAuthor({ name: 'Added to queue', iconURL: client.config.iconURL })
-                .setDescription(`[${title}](${res.tracks[0].uri})` || 'No Title')
+                .setDescription(`[${title}](${res.tracks[0].uri})`)
                 .setURL(res.tracks[0].uri)
                 .addFields(
                     {

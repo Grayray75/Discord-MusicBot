@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 const winston = require('winston');
 const colors = require('colors');
 

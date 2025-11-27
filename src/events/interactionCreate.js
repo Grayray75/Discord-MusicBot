@@ -61,11 +61,15 @@ module.exports = async (client, interaction) => {
             checkRegex();
             let choice = [];
             await yt.search(url || Random, { safeSearch: false, limit: 25 }).then((result) => {
+                // eslint-disable-next-line no-constant-condition
+                if (result.loadType === 'LOAD_FAILED' || 'NO_MATCHES') {
+                    return;
+                }
                 result.forEach((x) => {
                     choice.push({ name: x.title, value: x.url });
                 });
             });
             return await interaction.respond(choice).catch(() => {});
-        } else if (result.loadType === 'LOAD_FAILED' || 'NO_MATCHES') return;
+        }
     }
 };
