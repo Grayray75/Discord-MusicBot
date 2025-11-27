@@ -53,7 +53,7 @@ lavalink:
     useSeekGhosting: true # Seek ghosting is the effect where whilst a seek is in progress, the audio buffer is read from until empty, or until seek is ready.
     youtubePlaylistLoadLimit: 1 # Number of pages at 100 each
     playerUpdateInterval: 5 # How frequently to send player updates to clients, in seconds
-    youtubeSearchEnabled: true
+    youtubeSearchEnabled: false
     soundcloudSearchEnabled: false
     gc-warnings: true
     #ratelimit:
