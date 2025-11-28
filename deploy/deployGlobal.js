@@ -4,7 +4,7 @@ const getConfig = require('../src/util/getConfig');
 const loadCommands = require('../src/util/loadCommands');
 
 (async () => {
-    const config = await getConfig();
+    const config = getConfig();
     const rest = new REST({ version: '9' }).setToken(config.token);
 
     const commands = await loadCommands().then((cmds) => {
